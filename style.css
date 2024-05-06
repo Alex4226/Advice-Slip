@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --background: #202632;
+    --container: #313A49;
+    --gray: #D9D9D9;
+    --green: #53FFAB;
+    --white: #FFF;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.show-advices-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--container);
+    color: var(--gray);
+    border: none;
+    cursor: pointer;
+}
+
+.fav-advices-container {
+    position: absolute;
+    top: 50px;
+    max-width: 540px;
+    background-color: var(--white);
+    padding: 20px 20px;
+    width: 60%;
+    border-radius: 10px;
+    z-index: 200;
+    transform: translate(0px, -300%);
+    transition: 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.50);
+    z-index: 100;
+    display: none;
+}
+
+.advice-container {
+    margin: 0px 25px;
+    background-color: var(--container);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 35px;
+    gap: 20px;
+    position: relative;
+    max-width: 540px;
+}
+
+.advice-id {
+    font-family: StratosWeb, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.9px;
+    letter-spacing: 0.14em;
+    text-align: left;
+    color: var(--green);
+    text-align: center;
+}
+
+.advice {
+    font-family: StratosWeb, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 37.8px;
+    text-align: center;
+    color: var(--gray);
+}
+
+.separator {
+    display: flex;
+    width: calc(100% - 40px);
+    padding: 20px;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+.line {
+    width: 100%;
+    height: 0px;
+}
+
+.random-button {
+    background-color: var(--green);
+    border: none;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    line-height: 0px;
+    position: absolute;
+    bottom: -30px;
+    cursor: pointer;
+}
+
+.favorites-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.favorite {
+    cursor: pointer;
+}
+
+.favorited {
+    display: none;
+    cursor: pointer;
+}
+
+.fav-advice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--gray);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.fav-advice {
+    font-family: StratosWeb, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
